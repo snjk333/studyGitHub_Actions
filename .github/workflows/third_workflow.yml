@@ -9,7 +9,7 @@ jobs:
       - name: List files before checkout
         run: |
           ls -la
-          lslsls -a
+        #  lslsls -a
 
       #- uses: actions/checkout@v6
       # OR with git commands
