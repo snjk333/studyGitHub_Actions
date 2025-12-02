@@ -8,3 +8,7 @@ jobs:
     steps:
       - name: Display some Text
         run: echo "This is my first workflow"
+      - name: Command in Multilines
+        run: |
+          node -v
+          npm -v
