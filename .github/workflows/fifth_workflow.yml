@@ -8,6 +8,7 @@ jobs:
     steps:
       - name: Event variables
         run: |
-          echo $GITHUB_SHA
+          echo $GITHUB_SHA 
           echo $GITHUB_REF
+        # commit id and commit branch
           
