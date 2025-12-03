@@ -1,0 +1,34 @@
+name: Fifth Workflow
+
+on:
+  push:
+    branches:
+      - main
+      - "page/*" # page/home, page/about
+      - "page/**" # page/home/team, page/about/us
+      - "!page/blog" # exclude specific branch
+      # from first to last. if change !page/blog to first and page/* to last, all page/* branches will be included, because include rule has higher priority than exclude rule
+    
+    # YOU CAN USE branches OR branches-ignore. NOT BOTH
+      # branches-ignore:
+    #   - "release/**" # ignore all release branches
+
+    # tags:
+    #   - "v1.*" # v1.1, v1.2
+    #   - "!v1.2.1" # exclude specific tag
+
+    paths:
+      - "**.html" # any file change with .html extension
+    
+#BRANCHES TAGS AND PATH should be like AND AND AND condition, meaning all conditions must be met to trigger the workflow.
+
+jobs:
+  run-first-command:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Event variables
+        run: |
+          echo $GITHUB_SHA 
+          echo $GITHUB_REF
+        # commit id and commit branch
+          
