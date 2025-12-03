@@ -1,0 +1,15 @@
+name: Seventh Workflow
+
+## DOC : https://crontab.cronhub.io/
+on:
+  schedule:
+    - cron: '*/2 * * * *' # Runs every 2 minutes
+jobs:
+  run-first-command:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Event variables
+        run: |
+          echo $GITHUB_SHA 
+          echo $GITHUB_REF
+          
