@@ -30,3 +30,16 @@ jobs:
           echo "Title: ${{inputs.titleCustom}}" 
           echo "Selected: ${{inputs.selectCustom}}"
           echo "Checked: ${{inputs.checkCustom}}"
+
+#  send post request with:
+#  link: https://api.github.com/repos/snjk333/studyGitHub_Actions/actions/workflows/eight_workflow.yml/dispatches
+# json:
+# {
+#     "ref": "main",
+#     "inputs":{
+#         "titleCustom": "hello from postman",
+#         "selectCustom": "catThird"
+#     }
+# }
+# Add headers from github documentation
+# https://docs.github.com/ru/rest/actions/workflows?apiVersion=2022-11-28#create-a-workflow-dispatch-event
