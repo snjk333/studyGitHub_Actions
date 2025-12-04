@@ -9,4 +9,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Event variables
-        run: echo "{{ github.event.client_payload.titleTest }}" 
+        run: echo "${{ github.event.client_payload.titleTest }}" 
